@@ -1,0 +1,43 @@
+.header-group{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 5px;
+    background-color: #12bbed;
+}
+
+.hamburger-bars{
+    width: 40px;
+    height: 40px;
+}
+
+.logo-section{
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.logo-section h1{
+    text-align: center;
+}
+
+.hamburger {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.hamburger-ex{
+    width: 40px;
+    height: 40px;
+}
+.header-btns{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.header-btns-login{
+    
+}
+
+.header-btns-search{
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
