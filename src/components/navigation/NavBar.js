@@ -51,12 +51,12 @@ function NavBar(){
                         <li>
                             <div>
                                 {isInputVisible ? (
-                                    <div>
-                                        <input type="text" value={searchValue} onChange={handleInputChange} />
-                                        <button onClick={handleSearch}>Search</button>
+                                    <div className="search-container">
+                                        <input className="search-box" type="text" value={searchValue} onChange={handleInputChange} placeholder="What are you craving?" />
+                                        <button className="search-button" onClick={handleSearch}>Search</button>
                                     </div>
-                                ): (
-                                    <button onClick={handleClick}>Start Search</button>
+                                ) : (
+                                    <button className="search-button" onClick={handleClick}>Search</button>
                                 )}
                             </div>
                         </li>
