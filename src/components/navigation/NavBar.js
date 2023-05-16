@@ -1,6 +1,10 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../../styles/NavBar.css";
+
+// TODO:
+// add styling for logo. it changes when clicking on search button
+// add a magnifying glass for search
 
 function NavBar(){
     const navRef = useRef();
@@ -8,6 +12,23 @@ function NavBar(){
     const showNavBar = () => {
         navRef.current.classList.toggle("responsive_nav");
     }
+
+    const [isInputVisible, setIsInputVisible] = useState(false);
+    const [searchValue, setSearchValue] = useState('');
+
+    const handleClick = () => {
+        setIsInputVisible(true);
+    };
+
+    const handleInputChange = (event) => {
+        setSearchValue(event.target.value);
+    };
+
+    const handleSearch = () => {
+        console.log('Perform search with: ', searchValue);
+        setSearchValue('');
+        setIsInputVisible(false);
+    };
 
     return (
         <header>
@@ -18,23 +39,35 @@ function NavBar(){
                 <div className="logo-section">
                     <h1 className="logo">Next Meal</h1>
                 </div>
-                {/* 
-                    so this is how you comment on react huh 
-                    i need to look up what ref is. id imagine it's like html
-                    where it's referencing something. good for navigating pages or something
-                */}
                 <div className="header-btns">
                     <nav ref={navRef}>
-                        <a className="header-btns-login" href="/">Login</a>
-                        <a className="header-btns-search" href="/">Search</a>
+                        <ul>
+                        {/* 
+                        I want to save the login for when/if i implement users being able 
+                        to sign in
                         
+                        <a className="header-btns-login" href="/">Login</a>
+                        */}
+                        <li>
+                            <div>
+                                {isInputVisible ? (
+                                    <div>
+                                        <input type="text" value={searchValue} onChange={handleInputChange} />
+                                        <button onClick={handleSearch}>Search</button>
+                                    </div>
+                                ): (
+                                    <button onClick={handleClick}>Start Search</button>
+                                )}
+                            </div>
+                        </li>
                         {/*
-                         this is an x mark to close the, soon to be, pop out menu, just need to implement a way to only show
-                         when the side menu is
+                        this is an x mark to close the, soon to be, pop out menu, just need to implement a way to only show
+                        when the side menu is
                         <button className="hamburger-ex" onClick={showNavBar}>
                             <FaTimes/>
                         </button>
                         */}
+                        </ul>
                     </nav>
                 </div>
             </div>

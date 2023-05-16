@@ -1,7 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
 .header-group{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem !important;
     width: 100%;
+    height: 115px;
     padding: 5px;
     background-color: #12bbed;
 }
@@ -18,22 +31,13 @@
 }
 .logo-section h1{
     text-align: center;
+    font-family: cursive;
+    font-size: 42px;
 }
 
-.hamburger {
-    margin-top: auto;
-    margin-bottom: auto;
-}
 .hamburger-ex{
     width: 40px;
     height: 40px;
-}
-.header-btns{
-    margin-top: auto;
-    margin-bottom: auto;
-}
-.header-btns-login{
-    
 }
 
 .header-btns-search{
@@ -41,3 +45,6 @@
     padding-right: 20px;
 }
 
+li {
+    list-style-type: none;
+}
