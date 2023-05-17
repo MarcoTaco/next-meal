@@ -1,17 +1,18 @@
 import { useRef, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+//import { FaBars, FaTimes } from "react-icons/fa";
 import "../../styles/NavBar.css";
 
 // TODO:
-// add styling for logo. it changes when clicking on search button
 // add a magnifying glass for search
 
 function NavBar(){
     const navRef = useRef();
 
-    const showNavBar = () => {
-        navRef.current.classList.toggle("responsive_nav");
-    }
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
 
     const [isInputVisible, setIsInputVisible] = useState(false);
     const [searchValue, setSearchValue] = useState('');
@@ -33,8 +34,21 @@ function NavBar(){
     return (
         <header>
             <div className="header-group">
-                <div className="hamburger">
-                    <button className="hamburger-bars" onClick={showNavBar}> <FaBars /> </button>
+                <div className="hamburger-section">
+                    <div className={`hamburger ${isOpen ? 'open' : ''}`}>
+                        <div className="hamburger-menu" onClick={toggleMenu}>
+                            <div className="line"></div>
+                            <div className="line"></div>
+                            <div className="line"></div>
+                        </div>
+                        <ul className="menu">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/menu-selection">Search</a></li>
+                            <li><a href="/contact-us">Contact Us</a></li>
+                            <li><a href="/about-us">About Us</a></li>
+                            {/* <li>Login</li> */}
+                        </ul>
+                    </div>
                 </div>
                 <div className="logo-section">
                     <h1 className="logo">Next Meal</h1>
