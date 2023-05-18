@@ -18,9 +18,11 @@ body{
     background-color: #12bbed;
 }
 
+.hamburger-section {
+    flex-basis: 33%;
+}
+
 .hamburger {
-    display: flex;
-    flex-direction: column;
     cursor: pointer;
 }
 
@@ -29,27 +31,66 @@ body{
     height: 3px;
     background-color: black;
     margin-bottom: 4px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.x-line-one {
+    position: absolute;
+    top: 5px;
+    width: 15px;
+    height: 5px;
+    background-color: black;
+    transform: rotate(40deg);
+}
+
+.x-line-two {
+    position: absolute;
+    top: 5px;
+    width: 15px;
+    height: 5px;
+    background-color: black;
+    transform: rotate(-40deg);
+}
+
+.exit-menu {
+    position: fixed;
+    top: 15px;
+    left: -100%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    transition: left 0.5s ease-in-out;
+}
+
+.exit-menu.open {
+    left: 180px;
 }
 
 .menu {
-    display: none;
-}
-
-.open .line{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 15%;
+    height: 100vh;
     background-color: #fff;
+    transition: left 0.5s ease-in-out;
 }
 
-.open .menu{
-    display: block;
+.menu.open {
+    left: 0;
 }
 
-.hamburger-bars{
-    width: 40px;
-    height: 40px;
+.menu ul {
+    list-style-type: none;
+}
+  
+.menu ul li {
+    margin-bottom: 10px;
 }
 
-.hamburger-section {
-    flex-basis: 33%;
+.hamburger-menu-choices {
+    padding-top: 50px;
+    padding-left: 20px;
 }
 
 .logo-section{

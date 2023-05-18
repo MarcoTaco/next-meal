@@ -2,9 +2,6 @@ import { useRef, useState } from "react";
 //import { FaBars, FaTimes } from "react-icons/fa";
 import "../../styles/NavBar.css";
 
-// TODO:
-// add a magnifying glass for search
-
 function NavBar(){
     const navRef = useRef();
 
@@ -12,6 +9,10 @@ function NavBar(){
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+
+    const closeMenu = () => {
+        setIsOpen(false);
     };
 
     const [isInputVisible, setIsInputVisible] = useState(false);
@@ -35,13 +36,17 @@ function NavBar(){
         <header>
             <div className="header-group">
                 <div className="hamburger-section">
-                    <div className={`hamburger ${isOpen ? 'open' : ''}`}>
-                        <div className="hamburger-menu" onClick={toggleMenu}>
-                            <div className="line"></div>
-                            <div className="line"></div>
-                            <div className="line"></div>
+                    <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                    </div>
+                    <div className={`menu ${isOpen ? 'open' : ''}`}>
+                        <div className={`exit-menu ${isOpen ? 'open' : ''}`} onClick={closeMenu}>
+                            <div className="x-line-one"></div>
+                            <div className="x-line-two"></div>
                         </div>
-                        <ul className="menu">
+                        <ul className="hamburger-menu-choices">
                             <li><a href="/">Home</a></li>
                             <li><a href="/menu-selection">Search</a></li>
                             <li><a href="/contact-us">Contact Us</a></li>
