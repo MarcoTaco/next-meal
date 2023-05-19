@@ -5,11 +5,15 @@ function Home(){
     return(
       <div className="home-page">
         <div className="first-section">
-          <h2>Welcome to Next Meal!</h2>
-          <h3>Enter ingredients here, and click enter to start adding your list of ingredients!</h3>
-          <input className="ingredients-text-box" type="text" placeholder="Enter your ingredients!"/>
-          <button className="search-button">Search</button>
-          <p>this is all subject to change once i find my notes</p>
+          <div className="introduction-verbiage">
+            <h2>Welcome to Next Meal!</h2>
+            <h3>Enter ingredients here, and click enter to start adding your list of ingredients!</h3>
+          </div>
+          <div className="search-food">
+            <input className="ingredients-text-box" type="text" placeholder="Enter your ingredients!"/>
+            <button className="search-button">Search</button>
+          </div>
+          {/*<p>this is all subject to change once i find my notes</p>*/}
         </div>
         <div className="second-section">
           <p>this is where the rotating foods are gonna be. it will be a random selection on a caraousel.</p>
