@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
-//import { FaBars, FaTimes } from "react-icons/fa";
 import "../../styles/NavBar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 function NavBar(){
     const navRef = useRef();
@@ -21,6 +22,11 @@ function NavBar(){
     const handleClick = () => {
         setIsInputVisible(true);
     };
+
+    const closeSearch = () => {
+        setIsInputVisible(false);
+    };
+
 
     const handleInputChange = (event) => {
         setSearchValue(event.target.value);
@@ -47,10 +53,10 @@ function NavBar(){
                             <div className="x-line-two"></div>
                         </div>
                         <ul className="hamburger-menu-choices">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/menu-selection">Search</a></li>
-                            <li><a href="/contact-us">Contact Us</a></li>
-                            <li><a href="/about-us">About Us</a></li>
+                            <li className="choices"><a href="/">Home</a></li>
+                            <li className="choices"><a href="/menu-selection">Search</a></li>
+                            <li className="choices"><a href="/contact-us">Contact Us</a></li>
+                            <li className="choices"><a href="/about-us">About Us</a></li>
                             {/* <li>Login</li> */}
                         </ul>
                     </div>
@@ -71,11 +77,14 @@ function NavBar(){
                             <div>
                                 {isInputVisible ? (
                                     <div className="search-container">
-                                        <input className="search-box" type="text" value={searchValue} onChange={handleInputChange} placeholder="What are you craving?" />
-                                        <button className="search-button" onClick={handleSearch}>Search</button>
+                                        <input className="search-box" type="text" value={searchValue} onChange={handleInputChange} placeholder="Search For A Dish!" />
+                                        <div className="search-buttons">
+                                            <FontAwesomeIcon icon={faSearch} className="search-button" onClick={handleSearch} />
+                                            <FontAwesomeIcon icon={faTimes} className="search-button" onClick={closeSearch} />
+                                        </div>
                                     </div>
                                 ) : (
-                                    <button className="search-button" onClick={handleClick}>Search</button>
+                                    <FontAwesomeIcon icon={faSearch} className="search-button" onClick={handleClick} />
                                 )}
                             </div>
                         </li>
