@@ -34,40 +34,6 @@ body{
     transition: background-color 0.5s ease-in-out;
 }
 
-.x-line-one {
-    position: absolute;
-    top: 5px;
-    left: 20px;
-    width: 15px;
-    height: 5px;
-    background-color: black;
-    transform: rotate(40deg);
-}
-
-.x-line-two {
-    position: absolute;
-    left: 20px;
-    top: 5px;
-    width: 15px;
-    height: 5px;
-    background-color: black;
-    transform: rotate(-40deg);
-}
-
-.exit-menu {
-    position: fixed;
-    top: 15px;
-    left: -100%;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-    transition: left 0.5s ease-in-out;
-}
-
-.exit-menu.open {
-    left: 180px;
-}
-
 .menu {
     position: fixed;
     top: 0;
@@ -88,6 +54,40 @@ body{
   
 .menu ul li {
     margin-bottom: 10px;
+}
+
+.exit-menu {
+    position: fixed;
+    top: 15px;
+    left: -100%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    transition: left 0.5s ease-in-out;
+}
+
+.exit-menu.open {
+    left: 180px;
+}
+
+.x-line-one {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    width: 15px;
+    height: 5px;
+    background-color: black;
+    transform: rotate(40deg);
+}
+
+.x-line-two {
+    position: absolute;
+    left: 20px;
+    top: 5px;
+    width: 15px;
+    height: 5px;
+    background-color: black;
+    transform: rotate(-40deg);
 }
 
 .hamburger-menu-choices {
@@ -127,16 +127,6 @@ body{
     flex-basis: 33%;
 }
 
-.hamburger-ex{
-    width: 40px;
-    height: 40px;
-}
-
-.header-btns-search{
-    padding-left: 10px;
-    padding-right: 20px;
-}
-
 li {
     list-style-type: none;
 }
@@ -149,17 +139,18 @@ li {
     padding-left: 15px;
 }
 
+.search-buttons-section {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .search-button{
     border-radius: 20px;
     padding: 8px;
     outline: none;
     border: none;
     margin-left: 5px;
-}
-
-.search-buttons {
-    float: right;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    cursor: pointer;
 }
