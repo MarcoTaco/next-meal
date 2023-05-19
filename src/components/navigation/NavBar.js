@@ -57,7 +57,6 @@ function NavBar(){
                             <li className="choices"><a href="/menu-selection">Search</a></li>
                             <li className="choices"><a href="/contact-us">Contact Us</a></li>
                             <li className="choices"><a href="/about-us">About Us</a></li>
-                            {/* <li>Login</li> */}
                         </ul>
                     </div>
                 </div>
