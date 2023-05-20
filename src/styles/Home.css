@@ -32,10 +32,15 @@ body {
 .introduction-verbiage h3 {
     font-size: 40px;
 }
+
+.ingredients-text-box {
+    border-radius: 20px;
+    
+}
 .search-food {
     display: flex;
     align-items: center;
-    justify-content: top;
+    justify-content: center;
     grid-column: 2;
     grid-row: 2; 
 }
