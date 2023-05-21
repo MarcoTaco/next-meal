@@ -1,7 +1,19 @@
 import React from "react";
 import "../styles/Home.css";
+import { useState } from "react";
 
 function Home(){
+  const [searchValue, setSearchValue] = useState('');
+
+  const searchInputHandle = (event) => {
+    setSearchValue(event.target.value);
+  };
+
+  const searchHandle = () => {
+    console.log("Searched ingredient was: " + searchValue);
+    setSearchValue('');
+  };
+
     return(
       <div className="home-page">
         <div className="first-section">
@@ -10,8 +22,10 @@ function Home(){
             <h3>Enter ingredients here, and click enter to start adding your list of ingredients!</h3>
           </div>
           <div className="search-food">
-            <input className="ingredients-text-box" type="text" placeholder="Enter your ingredients!"/>
-            <button className="search-button">Search</button>
+            <input className="ingredients-text-box" value={searchValue} onChange={searchInputHandle} type="text" placeholder="Enter your ingredients!"/>
+            <button className="button-home add">Add</button>
+            <button className="button-home search" onClick={searchHandle}>Search</button>
+            <button className="button-home clear">Clear Filters</button>
           </div>
           {/*<p>this is all subject to change once i find my notes</p>*/}
         </div>
