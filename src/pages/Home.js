@@ -34,11 +34,11 @@ function Home(){
             <div className="search-food-buttons">
               {searchResults.length <= 8 && (
                 <input className="ingredients-text-box" value={searchValue} onChange={searchInputHandle} type="text" placeholder="Enter your ingredients! (Max of 8 Ingredients)"/>)}
-              {searchResults.length <= 8 && (<button className="button-home add" onClick={addHandle}>Add</button>) }
+              {searchResults.length <= 8 && (<button className="button-home add" disabled={searchValue === ''}onClick={addHandle}>Add</button>) }
               {searchResults.length > 8 && (
                 <input className="ingredients-text-box max" type="text" placeholder="Reached Max Ingredients" readOnly/>
               )}
-              <button className="button-home search" onClick={searchHandle}>Search</button>
+              {searchResults.length > 0 && (<button className="button-home search" onClick={searchHandle}>Search</button>)}
               <button className="button-home clear" onClick={clearHandle}>Clear Filters</button>
             </div>
             <div className="list-ingredients">
@@ -52,7 +52,40 @@ function Home(){
           {/*<p>this is all subject to change once i find my notes</p>*/}
         </div>
         <div className="second-section">
-          <p>this is where the rotating foods are gonna be. it will be a random selection on a caraousel.</p>
+          <h3 className="second-section-header">Popular Foods Of The Day</h3>
+          <div className="popular-foods">
+            <div className="popular-food-arrows left">
+              <div></div>
+            </div>
+            <div className="popular-food-item">
+              <div className="popular-food-pic">
+                    <div></div>
+              </div>
+              <div className="popular-food-name">
+                <span>testing</span>
+              </div>
+            </div>
+            <div className="popular-food-item">
+              <div className="popular-food-pic">
+                <div></div>
+              </div>
+              <div className="popular-food-name">
+                <span>testing</span>
+              </div>
+            </div>
+            <div className="popular-food-item">
+              <div className="popular-food-pic">
+                <div></div>
+              </div>
+              <div className="popular-food-name">
+                <span>testing</span>
+              </div>
+            </div>
+            <div className="popular-food-arrows right">
+              <div></div>
+            </div>
+          </div>
+          {/*<p>this is where the rotating foods are gonna be. it will be a random selection on a caraousel.</p>*/}
         </div>
         <div className="third-section">
           <p>this is i think where i put the about us or something. i have to check my notes.</p>
