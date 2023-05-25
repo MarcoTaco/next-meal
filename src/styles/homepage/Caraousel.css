@@ -1,0 +1,67 @@
+
+.second-section {
+    width: 99%;
+    height: 50vh;
+    background-color: #12bbed;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.second-section-header {
+    text-align: center;
+    font-size: 35px;
+    padding-top: 25px;
+}
+
+.popular-food-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+}
+
+.popular-foods {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* width: 80%;
+    margin-right: auto;
+    margin-left: auto; */
+}
+
+.popular-food-item {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.popular-food-pic div {
+    height: 400px;
+    background-color: white;
+}
+
+.popular-food-name {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.popular-food-arrows div{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+}
+
+.popular-food-arrows.left {
+    margin-left: 15px;
+}
+
+.popular-food-arrows.right {
+    margin-right: 15px;
+}
