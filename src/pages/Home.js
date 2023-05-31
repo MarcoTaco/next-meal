@@ -9,7 +9,9 @@ function Home(){
     return(
       <div className="home-page">
         <IngredientsEntry />
+
         <Caraousel />
+        
         <FilterSection />
       </div>
     );
