@@ -3,18 +3,14 @@ import "../styles/homepage/Home.css";
 import "../components/homepage/Caraousel";
 import Caraousel from "../components/homepage/Caraousel";
 import IngredientsEntry from "../components/homepage/IngredientsEntry";
+import FilterSection from "../components/homepage/FilterSection";
 
 function Home(){
     return(
       <div className="home-page">
         <IngredientsEntry />
-        
         <Caraousel />
-
-        <div className="third-section">
-          <p>this is i think where i put the about us or something. i have to check my notes.</p>
-          <p>im just putting the notes here to structure how the page is going to look</p>
-        </div>
+        <FilterSection />
       </div>
     );
 };
