@@ -4,7 +4,8 @@
     margin-right: auto;
     margin-left: auto;
     height: 25vh;
-    background-color: #12bbed;
+    /* background-color: #12bbed; */
+    background-color: gray;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

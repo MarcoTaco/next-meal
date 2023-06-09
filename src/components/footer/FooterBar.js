@@ -1,8 +1,11 @@
 import React from "react";
+import "../../styles/FooterBar.css";
 
 function FooterBar() {
     return (
-        <h4>test</h4>
+        <div className="footer-section">
+            <div></div>
+        </div>
     );
 };
 
