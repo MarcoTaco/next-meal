@@ -10,18 +10,6 @@ function IngredientsPage() {
         setButtonText(buttonText);
     };
 
-    /*
-    const ingredientBtn = () => {
-        setButtonText("ingredient button is pressed");
-    };
-
-    const instructionBtn = () => {
-        setButtonText("instruction button is pressed");
-    };
-    */
-
-
-
     return(
         <div className="ingredients-page">  
             <div className="header">
