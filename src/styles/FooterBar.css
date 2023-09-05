@@ -1,5 +1,6 @@
 .footer-section {
-    margin-top: 15px;
+    position: absolute;
+    bottom: 0;
     height: 5vh;
     width: 100%;
     background-color: #12bbed;
