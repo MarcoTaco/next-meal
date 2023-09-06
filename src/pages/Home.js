@@ -4,16 +4,19 @@ import "../components/homepage/Caraousel";
 import Caraousel from "../components/homepage/Caraousel";
 import IngredientsEntry from "../components/homepage/IngredientsEntry";
 import FilterSection from "../components/homepage/FilterSection";
+import Layout from "../components/Layout";
 
 function Home(){
     return(
-      <div className="home-page">
-        <IngredientsEntry />
+      <Layout>
+        <div className="home-page">
+          <IngredientsEntry />
 
-        <Caraousel />
-        
-        <FilterSection />
-      </div>
+          <Caraousel />
+          
+          <FilterSection />
+        </div>
+      </Layout>
     );
 };
 
