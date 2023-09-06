@@ -4,7 +4,7 @@
 }
 
 .display-foods-main{
-    height: 30vh;
+    min-height: 100vh;
     width: 100%;
 }
 
