@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../../styles/NavBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -57,7 +58,9 @@ function NavBar(){
                             <div className="x-line-two"></div>
                         </div>
                         <ul className="hamburger-menu-choices">
-                            <li className="choices"><a href="/">Home</a></li>
+                            <li className="choices"><Link to="/">Home</Link></li>
+                            <li className="choices"><Link to="/ingredients-page">Ingredients Page</Link></li>
+                            <li className="choices"><Link to="/food-display-page">Foods Display Page</Link></li>
                             <li className="choices"><a href="/menu-selection">Search</a></li>
                             <li className="choices"><a href="/contact-us">Contact Us</a></li>
                             <li className="choices"><a href="/about-us">About Us</a></li>

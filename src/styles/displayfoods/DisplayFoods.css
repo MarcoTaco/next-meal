@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.display-foods-main{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.display-foods.header{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+}
+
+.filter-and-food-section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 50px;
+}
+
+.foods-filter-section{
+    width: 25%;
+    background-color: gray;
+}
+
+.all-foods-section{
+    width: 75%;
+    background-color: red;
+}
