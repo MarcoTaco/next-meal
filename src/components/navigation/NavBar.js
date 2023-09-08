@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../styles/NavBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -89,7 +89,6 @@ function NavBar(){
                                 </div>
                             </li>
                         </ul>
-                        <Outlet />
                     </nav>
                 </div>
             </div>

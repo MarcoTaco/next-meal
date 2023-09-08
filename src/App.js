@@ -9,15 +9,16 @@ function App(){
   return (
     <React.Fragment>
       <BrowserRouter>
+      <Navbar />
         <Routes>
-          <Route path="/" element={<Navbar />} >
-            <Route index element={<Home />} />
-            <Route path="ingredients-page" element={<IngredientsPage />} />
-            <Route path="food-display-page" element={<DisplayFoods />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/ingredients-page" element={<IngredientsPage />} />
+          <Route path="/food-display-page" element={<DisplayFoods />} />
         </Routes>
       </BrowserRouter>
     </React.Fragment>
   );
 }
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(<App />);
 export default App;

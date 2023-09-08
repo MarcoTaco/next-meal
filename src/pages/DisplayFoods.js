@@ -7,7 +7,7 @@ function DisplayFoods(){
         <Layout>
             <div className="display-foods-main">
                 <div className="display-foods header">
-                    <h4>All Foods You Stinkies</h4>
+                    <h4>All Foods On Display</h4>
                 </div>
                 <div className="filter-and-food-section">
                     <div className="foods-filter-section">
