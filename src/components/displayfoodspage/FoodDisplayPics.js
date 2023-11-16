@@ -1,20 +1,14 @@
-import React, { useState, useEffect } from "react";
-import "../../styles/FoodDisplayPics.css";
+import Food from "./Food";
 
-function FoodDisplayPics(){
-    const [products, setProducts] = useState([]);
-    const apiKey = process.env.REACT_APP_API_KEY;
+function FoodDisplayPics({ searchResults }){
+    const results = searchResults.map(food => <Food key={food.id} food={food} />)
     
-    // useEffect(() => {
-    //     fetch(`https://api.spoonacular.com/food/products/search?query=yogurt&apiKey=${apiKey}`)
-    //     .then((response) => response.json())
-    //     .then((data) => setProducts(data))
-    //     .catch((error) => console.error("Error fetching data: ", error));
-    // }, []);
+    const content = results?.length ? results : <article><p>No Matching Posts</p></article>
+
 
     return(
-        <h4>test</h4>
-    );
+        <main>{content}</main>
+    )
 }
 
 export default FoodDisplayPics;
