@@ -24,14 +24,16 @@ function IngredientsPage() {
                     <div className="ingredients-information">
                         <div className="buttons">
                             <div className="ingredients-button">
-                                {/*<button className="ing-button btn" onClick={ingredientBtn}>Ingredients</button>*/}
                                 <button onClick={() => handleBtnClick('ing-button', 'ingredient button is pressed')}
-                                    className={activeButton === 'ing-button' ? 'active' : ''}>Ingredients</button>
+                                    className={activeButton === 'ing-button' ? 'active' : ''}>
+                                    Ingredients
+                                </button>
                             </div>
                             <div className="instructions-button">
-                                {/*<button className="inst-button btn" onClick={instructionBtn}>Instructions</button>*/}
                                 <button onClick={() => handleBtnClick('inst-button', 'instruction button is pressed')}
-                                    className={activeButton === 'inst-button' ? 'active' : ''}>Instructions</button>
+                                    className={activeButton === 'inst-button' ? 'active' : ''}>
+                                    Instructions
+                                </button>
                             </div>
                         </div>
                         <div className="lotta-text">

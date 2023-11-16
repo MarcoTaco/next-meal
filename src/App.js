@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navigation/NavBar";
 import Home from "./pages/Home";
 import IngredientsPage from './pages/IngredientPage';
-import DisplayFoods from './pages/DisplayFoods';
+import FoodList from './pages/FoodList';
 
 function App(){
   return (
@@ -13,12 +13,11 @@ function App(){
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ingredients-page" element={<IngredientsPage />} />
-          <Route path="/food-display-page" element={<DisplayFoods />} />
+          <Route path="/food-display-page" element={<FoodList />} />
         </Routes>
       </BrowserRouter>
     </React.Fragment>
   );
 }
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<App />);
+
 export default App;
