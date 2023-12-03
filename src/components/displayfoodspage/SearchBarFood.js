@@ -1,3 +1,9 @@
+/*
+
+this component is planned to filter out the food we are searching for in the food display pictures page
+
+*/
+
 function searchBarFood({ foods, setSearchResults }){
     const handleSubmit = (e) => e.preventDefault();
 

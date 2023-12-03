@@ -1,11 +1,14 @@
+/*
+
+this file is a component of the food pic it's self. this is the individual food picture that you will see
+in the "food menu" type page. think of shopping for clothes page where you can filter. this is just the
+picture and food title
+
+*/
 function Food({ foods }){
     return(
         <article>
-            <p>{foods.title}</p>
-            {/*
-            fill this in with what im looking for in the spoonacular api
-            <p>{foods.body}</p>
-            */}
+            
         </article>
     )
 }
